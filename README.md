@@ -16,3 +16,26 @@ Realiza una aplicación en java que distinga diferentes tipo de transporte para 
     1 - envoltorio cartón
   
     2 - caja de madera
+
+```mermaid
+classDiagram
+Transporte <.. Bicicleta : implements
+Transporte <.. Camion : implements
+class Transporte{ +tipoEmbalaje(Float x, Float y, Float z, Float peso)Integer
+ +costeTotal(Integer cp)Float}
+<<Interface>> Transporte
+Main "1" *-- "1..*" FactoriaTransporte : association
+class Main{
++main()
+}
+class FactoriaTransporte{
++BICI: int
++CAMION: int
++getProducto(int tipoVehiculo)Transporte
+}
+FactoriaTransporte "1" *-- "1..*" Transporte : association
+class Bicicleta {+tipoEmbalaje(Float x, Float y, Float z, Float peso)Integer
+ +costeTotal(Integer cp)Float}
+class Camion {+tipoEmbalaje(Float x, Float y, Float z, Float peso)Integer
+ +costeTotal(Integer cp)Float} 
+```      
