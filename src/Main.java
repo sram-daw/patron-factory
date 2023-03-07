@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    static ITransporte transporte; //????
+    static Transporte transporte; //????
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);

@@ -1,6 +1,4 @@
-import java.util.IllegalFormatCodePointException;
-
-public class Bicicleta implements ITransporte {
+public class Bicicleta implements Transporte {
 
 
    @Override

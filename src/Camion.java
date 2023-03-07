@@ -1,4 +1,4 @@
-public class Camion implements ITransporte {
+public class Camion implements Transporte {
 
 
     @Override
