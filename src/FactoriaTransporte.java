@@ -1,8 +1,9 @@
+/**
+ * Fabrica encargada de devolver el producto
+ * que elegimos según el tipo: bicicleta o camión
+ */
 public class FactoriaTransporte {
-    /**
-     * Fabrica encargada de devolver el producto
-     * que elegimos según el tipo: bicicleta o camión
-     */
+
 
     /**
      * opción de uso para seleccionar el objeto de tipo Bicicleta

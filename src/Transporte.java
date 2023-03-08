@@ -1,10 +1,9 @@
+/**
+ * Interfaz que tiene los métodos que
+ * son comunes a todos los transportes
+ * Es necesaria para poder devolver los diferentes objetos/productos
+ */
 public interface Transporte {
-
-    /**
-     * Interfaz que tiene los métodos que
-     * son comunes a todos los transportes
-     * Es necesaria para poder devolver los diferentes objetos/productos
-     */
 
     /**
      * Calcula el coste del envío
