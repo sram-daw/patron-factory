@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    static Transporte transporte; //????
+    static Transporte transporte; //implementación de la interfaz. Funciona como un contenedor genérico para el objeto que se instancie posteriormente
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
