@@ -1,6 +1,13 @@
 import java.util.Scanner;
 
 public class Main {
+    /**
+     *Examen patrón de diseño factory
+     *
+     * @author Sara
+     * @version 0.2
+     */
+
 
     static Transporte transporte; //implementación de la interfaz. Funciona como un contenedor genérico para el objeto que se instancie posteriormente. No es una instancia, es una declaración de "Transporte".
 
@@ -14,7 +21,7 @@ public class Main {
         Integer embalaje = 0;
         Integer cp = 0;
         Float coste = 0f;
-        System.out.println("Escoja el tipo de transporte que desea utilizar: \n1.Bicicleta \n2.Camión");
+        System.out.println("Escoja el tipo de transporte que desea utilizar: \n1.Bicicleta \n2.Camión \n3.Barco");
         medio = input.nextInt();
         System.out.println("Introduzca su CP: ");
         cp = input.nextInt();
@@ -28,6 +35,7 @@ public class Main {
         z = input.nextFloat();
 
         switch (medio) {
+            //Bicicleta
             case 1:
                 transporte = FactoriaTransporte.getProducto(FactoriaTransporte.BICI);
                 System.out.println("El medio de transporte elegido es bicicleta.");
@@ -41,6 +49,8 @@ public class Main {
                 }
                 coste = transporte.costeTotal(cp);
                 System.out.println("El coste del envío es de " + coste + "€");
+                break;
+            //Camión
             case 2:
                 transporte = FactoriaTransporte.getProducto(FactoriaTransporte.CAMION);
                 System.out.println("El medio de transporte elegido es camión.");
@@ -54,6 +64,22 @@ public class Main {
                 }
                 coste = transporte.costeTotal(cp);
                 System.out.println("El coste del envío es de " + coste + "€");
+                break;
+            //Barco
+            case 3:
+                transporte = FactoriaTransporte.getProducto(FactoriaTransporte.BARCO);
+                System.out.println("El medio de transporte elegido es barco.");
+                embalaje = transporte.tipoEmbalaje(x, y, z, peso);
+                if (embalaje == 0) {
+                    System.out.println("El paquete se enviará en un palet.");
+                } else if (embalaje == 1) {
+                    System.out.println("El paquete se enviará en una caja.");
+                } else if (embalaje == 2) {
+                    System.out.println("El paquete se enviará en una caja de madera.");
+                }
+                coste = transporte.costeTotal(cp);
+                System.out.println("El coste del envío es de " + coste + "€");
+                break;
         }
 
 

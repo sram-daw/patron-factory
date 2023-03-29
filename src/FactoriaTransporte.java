@@ -23,7 +23,7 @@ public class FactoriaTransporte {
     /**
      * Devuelve la instancia del tipo de objeto concreto que hereda de la interfaz Transporte
      *
-     * @param tipoVehiculo 0: bicicleta, 1:camion
+     * @param tipoVehiculo selecciona el tipo de transporte que se instancia; 0: bicicleta, 1:camion, 2:barco
      * @return producto segun el tipo
      */
     public static Transporte getProducto(int tipoVehiculo) {
@@ -32,6 +32,8 @@ public class FactoriaTransporte {
                 return new Bicicleta();
             case CAMION:
                 return new Camion();
+            case BARCO:
+                return new Barco();
             default:
                 return null;
         }
