@@ -16,7 +16,13 @@ public class FactoriaTransporte {
     public static final int CAMION = 1;
 
     /**
+     * opción de uso para seleccionar el objeto de tipo Barco
+     */
+    public static final int BARCO = 2;
+
+    /**
      * Devuelve la instancia del tipo de objeto concreto que hereda de la interfaz Transporte
+     *
      * @param tipoVehiculo 0: bicicleta, 1:camion
      * @return producto segun el tipo
      */
